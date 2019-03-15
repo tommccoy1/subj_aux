@@ -9,4 +9,7 @@ python corpusProc.py no_agr
 This will generate no_agr.train, no_agr.gen, and no_agr.test. 
 Note that, to use these, you should shuffle the order of the lines in the file.
 
+The grammar files express PCFGs, where the first element of each row is the weight for that rule (and all weights with a given
+left-hand-side will be normalized to get probabilities).
+
 

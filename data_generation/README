@@ -1,0 +1,12 @@
+How to generate data:
+1) Generate raw examples (which have some additional tags in them, a.g. AUX) from a grammar (here no_agr.gr). 
+The name of the output should be PREFIX.raw, for some prefix of your choice:
+./randsent.sh no_agr.gr 1000000 > no_agr.raw
+
+2) Process those examples into training/test/gen sets, where the argument is PREFIX from above (here, no_agr):
+python corpusProc.py no_agr
+
+This will generate no_agr.train, no_agr.gen, and no_agr.test. 
+Note that, to use these, you should shuffle the order of the lines in the file.
+
+
